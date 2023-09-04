@@ -1,4 +1,4 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_5;
 
 public class DaemonDemo {
     public static class DaemonT extends Thread {

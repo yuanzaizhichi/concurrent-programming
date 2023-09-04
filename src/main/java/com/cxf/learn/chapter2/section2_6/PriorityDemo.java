@@ -1,4 +1,4 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_6;
 
 public class PriorityDemo {
     public static class HightPriority extends Thread {

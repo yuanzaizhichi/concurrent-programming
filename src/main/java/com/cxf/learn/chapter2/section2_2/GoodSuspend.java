@@ -1,4 +1,4 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_2;
 
 public class GoodSuspend {
     public static Object u = new Object();

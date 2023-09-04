@@ -1,4 +1,4 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_8;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,17 +1,15 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_8;
 
-public class AccountingVol implements Runnable {
-    static AccountingVol instance = new AccountingVol();
-    static volatile int i = 0;
-
-    public static void increase() {
-        i++;
-    }
+public class BadLockOnInteger implements Runnable {
+    public static Integer i = 0;
+    static BadLockOnInteger instance = new BadLockOnInteger();
 
     @Override
     public void run() {
         for (int j = 0; j < 10000000; j++) {
-            increase();
+            synchronized (instance) {
+                i++;
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-package com.cxf.learn.chapter2;
+package com.cxf.learn.chapter2.section2_2;
 
 import java.util.Objects;
 
