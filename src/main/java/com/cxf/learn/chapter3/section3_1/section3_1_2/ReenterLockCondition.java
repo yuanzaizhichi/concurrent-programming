@@ -9,7 +9,6 @@ public class ReenterLockCondition implements Runnable {
 
     @Override
     public void run() {
-        notify();
         try {
             lock.lock();
             condition.await();
@@ -17,6 +16,7 @@ public class ReenterLockCondition implements Runnable {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         } finally {
+            System.out.println("子线程释放锁");
             lock.unlock();
         }
     }
@@ -27,6 +27,7 @@ public class ReenterLockCondition implements Runnable {
         Thread.sleep(2000);
         lock.lock();
         condition.signal();
+        System.out.println("主线程释放锁");
         lock.unlock();
     }
 }
